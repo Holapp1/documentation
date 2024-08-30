@@ -46,6 +46,14 @@ localization:
 
 .. _india/e-invoicing:
 
+Indian Configuration
+====================
+
+In :menuselection:`Settings --> Users & Companies --> Companies`, add your PAN and GST number.
+
+.. image:: india/company-form.png
+   :alt: Company form
+
 e-Invoice system
 ================
 
