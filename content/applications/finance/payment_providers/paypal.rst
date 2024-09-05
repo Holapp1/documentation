@@ -94,7 +94,7 @@ Settings in Odoo
 ================
 
 .. seealso::
-   :ref:`payment_providers/add_new`
+   :ref:`payment-providers-add-new`
 
 Credentials
 -----------
@@ -123,7 +123,7 @@ retrieve the token by following the configuration steps at :ref:`paypal/pdt`.
 Extra fees
 ----------
 
-You can charge :ref:`extra fees <payment_providers/extra_fees>` to customers choosing to pay with
+You can charge :ref:`extra fees <payment-providers-extra-fees>` to customers choosing to pay with
 PayPal in order to cover the transaction fees PayPal charges you.
 
 .. note::
@@ -159,4 +159,4 @@ database.
 Run a test transaction from Odoo using the sandbox personal account.
 
 .. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`

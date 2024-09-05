@@ -17,7 +17,7 @@ The method to acquire your credentials depends on your hosting type:
 .. tabs::
    .. group-tab:: Odoo Online
 
-      #. :ref:`Navigate to the payment provider Stripe <payment_providers/supported_providers>` and
+      #. :ref:`Navigate to the payment provider Stripe <payment-providers-supported-providers>` and
          click :guilabel:`Connect Stripe`.
       #. Go through the setup process and confirm your email address when Stripe sends you a
          confirmation email.
@@ -27,7 +27,7 @@ The method to acquire your credentials depends on your hosting type:
 
    .. group-tab:: Odoo.sh or On-premise
 
-      #. :ref:`Navigate to the payment provider Stripe <payment_providers/supported_providers>` and
+      #. :ref:`Navigate to the payment provider Stripe <payment-providers-supported-providers>` and
          click :guilabel:`Connect Stripe`.
       #. Go through the setup process and confirm your email address when Stripe sends you a
          confirmation email.
@@ -35,19 +35,19 @@ The method to acquire your credentials depends on your hosting type:
          the payment provider **Stripe** in Odoo.
       #. :ref:`Fill in your credentials <stripe/api_keys>`.
       #. :ref:`Generate a webhook <stripe/webhook>`.
-      #. Select a :ref:`payment journal <payment_providers/journal>`.
+      #. Select a :ref:`payment journal <payment-providers-journal>`.
       #. Set the :guilabel:`State` field to :guilabel:`Enabled`.
       #. :ref:`stripe/local-payment-methods`.
 
 .. tip::
    - To use an existing Stripe account, :ref:`activate the Developer mode <developer-mode>` and
-     :ref:`enable Stripe manually <payment_providers/add_new>`. You can then :ref:`Fill in your
+     :ref:`enable Stripe manually <payment-providers-add-new>`. You can then :ref:`Fill in your
      credentials <stripe/api_keys>`, :ref:`generate a webhook <stripe/webhook>`, and enable the
      payment provider.
-   - You can also test Stripe using the :ref:`payment_providers/test-mode`. To do so, first,
+   - You can also test Stripe using the :ref:`payment-providers-test-mode`. To do so, first,
      `log into your Stripe dashboard <https://dashboard.stripe.com/dashboard>`_ and switch to the
      **Test mode**. Then, in Odoo, :ref:`activate the Developer mode <developer-mode>`,
-     :ref:`navigate to the payment provider Stripe <payment_providers/supported_providers>`,
+     :ref:`navigate to the payment provider Stripe <payment-providers-supported-providers>`,
      :ref:`fill in your API credentials <stripe/api_keys>` with the test keys, and set the
      :guilabel:`State` field to :guilabel:`Test Mode`.
 
@@ -62,7 +62,7 @@ If your **API credentials** are required to connect with your Stripe account, pr
    your Stripe dashboard and go to :menuselection:`Developers --> API Keys`.
 #. In the :guilabel:`Standard keys` section, copy the :guilabel:`Publishable key` and the
    :guilabel:`Secret key` and save them for later.
-#. In Odoo, :ref:`navigate to the payment provider Stripe <payment_providers/supported_providers>`.
+#. In Odoo, :ref:`navigate to the payment provider Stripe <payment-providers-supported-providers>`.
 #. In the :guilabel:`Credentials` tab, fill in the :guilabel:`Publishable Key` and
    :guilabel:`Secret Key` fields with the values you previously saved.
 
@@ -101,7 +101,7 @@ create a webhook automatically or manually.
       #. Click :guilabel:`Add endpoint`, then click :guilabel:`Reveal` and save your
          :guilabel:`Signing secret` for later.
       #. In Odoo, :ref:`navigate to the payment provider Stripe
-         <payment_providers/supported_providers>`.
+         <payment-providers-supported-providers>`.
       #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Webhook Signing Secret` field with
          the value you previously saved.
 
@@ -140,6 +140,6 @@ To allow customers to use the Apple Pay button to pay their eCommerce orders, go
 :guilabel:`Enable Apple Pay`.
 
 .. seealso::
-   - :ref:`Express checkout and Google Pay <payment_providers/express_checkout>`
+   - :ref:`Express checkout and Google Pay <payment-providers-express-checkout>`
    - :doc:`../payment_providers`
-   - :doc:`Use Stripe as a payment terminal in Point of Sale <../../sales/point_of_sale/payment_methods/terminals/stripe>`
+   - :doc:`Using Stripe as a payment terminal in Point of Sale <../../sales/point_of_sale/payment_methods/terminals/stripe>`

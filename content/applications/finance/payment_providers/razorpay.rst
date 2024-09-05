@@ -28,7 +28,7 @@ Configuration on Razorpay Dashboard
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment provider Razorpay <payment_providers/add_new>` and change its
+#. :ref:`Navigate to the payment provider Razorpay <payment-providers-add-new>` and change its
    state to :guilabel:`Enabled`.
 #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Key Id`, :guilabel:`Key Secret`, and
    :guilabel:`Webhook Secret` with the values you saved at the step
@@ -43,4 +43,4 @@ Configuration on Odoo
     **voided**.
 
 .. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`

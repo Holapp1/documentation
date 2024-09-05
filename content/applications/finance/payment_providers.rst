@@ -38,7 +38,7 @@ subscriptions with recurring payments using their favorite payment methods, such
    card numbers) is stored on Odoo servers or Odoo databases hosted elsewhere. Instead, Odoo apps
    use a unique reference number for the data stored safely in the payment providers' systems.
 
-.. _payment_providers/supported_providers:
+.. _payment-providers-supported-providers:
 
 Supported payment providers
 ===========================
@@ -46,7 +46,7 @@ Supported payment providers
 To access the supported payment providers, go to :menuselection:`Accounting --> Configuration -->
 Payment Providers` or :menuselection:`Website --> Configuration --> Payment Providers`.
 
-.. _payment_providers/online_providers:
+.. _payment-providers-online-providers:
 
 Online payment providers
 ------------------------
@@ -58,11 +58,11 @@ Online payment providers
 
    * -
      - Payment flow from
-     - :ref:`Tokenization <payment_providers/tokenization>`
-     - :ref:`Manual capture <payment_providers/manual_capture>`
-     - :ref:`Refunds <payment_providers/refunds>`
-     - :ref:`Express checkout <payment_providers/express_checkout>`
-     - :ref:`Extra fees <payment_providers/extra_fees>`
+     - :ref:`Tokenization <payment-providers-tokenization>`
+     - :ref:`Manual capture <payment-providers-manual-capture>`
+     - :ref:`Refunds <payment-providers-refunds>`
+     - :ref:`Express checkout <payment-providers-express-checkout>`
+     - :ref:`Extra fees <payment-providers-extra-fees>`
    * - :doc:`Adyen <payment_providers/adyen>`
      - Odoo
      - |V|
@@ -177,10 +177,10 @@ Bank payments
   | Your customers can make a bank transfer to register a SEPA Direct Debit mandate and get their
     bank account charged directly.
 
-.. _payment_providers/add_new:
+.. _payment-providers-add-new:
 
-Enable a payment provider
-=========================
+Enabling a payment provider
+===========================
 
 To add a new payment provider and make its related payment methods available to your customers,
 proceed as follows:
@@ -193,18 +193,18 @@ proceed as follows:
    Providers`.
 #. Select the provider and configure the :guilabel:`Credentials` tab.
 #. Set the :guilabel:`State` field to :guilabel:`Enabled`.
-#. Select a :ref:`payment journal <payment_providers/journal>`.
+#. Select a :ref:`payment journal <payment-providers-journal>`.
 
 .. note::
    - The fields available in the :guilabel:`Credentials` tab depend on the payment provider. Refer
-     to the :ref:`related documentation <payment_providers/supported_providers>` for more
+     to the :ref:`related documentation <payment-providers-supported-providers>` for more
      information.
    - Once you have enabled the payment provider, it is automatically published on your website.
      If you wish to unpublish it, click the :guilabel:`Published` button. Customers cannot make
      payments through an unpublished provider, but they can still manage
      :dfn:`(delete and assign to a subscription)` their existing tokens linked to such a provider.
 
-.. _payment_providers/test-mode:
+.. _payment-providers-test-mode:
 
 Test mode
 ---------
@@ -221,7 +221,7 @@ provider form to :guilabel:`Test mode`, then enter your provider's test/sandbox 
    We recommend using the test mode on a duplicate or a test database to avoid potential issues
    with your invoice numbering.
 
-.. _payment_providers/payment_methods:
+.. _payment-providers-payment-methods:
 
 Payment form
 ============
@@ -230,12 +230,12 @@ You can change the payment provider’s appearance on your website in the :guila
 tab of the selected payment provider. Modify its name in the :guilabel:`Displayed as` field and
 adapt the :guilabel:`Supported Payment Icons` if necessary.
 
-.. _payment_providers/tokenization:
+.. _payment-providers-tokenization:
 
 Tokenization
 ============
 
-:ref:`If the payment provider supports this feature <payment_providers/online_providers>`, customers
+:ref:`If the payment provider supports this feature <payment-providers-online-providers>`, customers
 can save their payment method details for later. To enable this feature, go to the
 :guilabel:`Configuration` tab of the selected payment provider and enable :guilabel:`Allow Saving
 Payment Methods`.
@@ -244,17 +244,26 @@ In this case, a **payment token** is created in Odoo to be used as a payment met
 payments without the customer having to enter their payment method details again. This is
 particularly useful for the eCommerce conversion rate and subscriptions that use recurring payments.
 
-.. note::
-   You remain fully PCI-compliant when you enable this feature because Odoo does not store the card
-   details directly. Instead, it creates a payment token that only references the card details
-   stored on the payment provider's server.
+.. tip::
+   To add or delete their saved payment method details, customers can click :guilabel:`Manage
+   payment methods` in the :ref:`customer portal <users-portal-payment-methods>`.
 
-.. _payment_providers/manual_capture:
+.. admonition:: PCI DSS and Attestation of Compliance
+
+   Odoo is not `PCI <https://www.pcisecuritystandards.org>`_ DSS-certified because it does not
+   store cardholder data or process payments. Instead, it outsources tokenization and payment to
+   :ref:`external payment providers <payment-providers-online-providers>`, which means that as an
+   Odoo customer, you only need to complete the minimal Self-Assessment Questionnaire (SAQ) with
+   the provider to obtain the Attestation of Compliance (AoC) and achieve PCI compliance. Odoo
+   should not be mentioned as a payment processor or a third-party service provider in the
+   :abbr:`SAQ (Self-Assessment Questionnaire)`.
+
+.. _payment-providers-manual-capture:
 
 Manual capture
 ==============
 
-:ref:`If the payment provider supports this feature <payment_providers/online_providers>`, you can
+:ref:`If the payment provider supports this feature <payment-providers-online-providers>`, you can
 authorize and capture payments in two steps instead of one. To enable this feature, go to the
 :guilabel:`Configuration` tab of the selected payment provider and enable :guilabel:`Capture Amount
 Manually`.
@@ -278,7 +287,7 @@ Transaction` button.
 .. note::
    - Some payment providers support capturing only part of the authorized amount. The remaining
      amount can then be either captured or voided. These providers have the value **Full and
-     partial** in the :ref:`table above <payment_providers/online_providers>`. The providers that
+     partial** in the :ref:`table above <payment-providers-online-providers>`. The providers that
      only support capturing or voiding the total amount have the value **Full only**.
    - The funds are likely not reserved forever. After a certain time, they may be automatically
      released back to the customer's payment method. Refer to your payment provider's documentation
@@ -286,7 +295,7 @@ Transaction` button.
    - Odoo does not support this feature for all payment providers, but some allow the manual capture
      from their website interface.
 
-.. _payment_providers/refunds:
+.. _payment-providers-refunds:
 
 Refunds
 =======
@@ -298,17 +307,17 @@ not need to be enabled first. To refund a customer payment, navigate to it and c
 .. note::
    - Some payment providers support refunding only part of the amount. The remaining amount can then
      optionally be refunded, too. These providers have the value **Full and partial** in the
-     :ref:`table above <payment_providers/online_providers>`. The providers that only support
+     :ref:`table above <payment-providers-online-providers>`. The providers that only support
      refunding the total amount have the value **Full only**.
    - Odoo does not support this feature for all payment providers, but some allow to refund payments
      from their website interface.
 
-.. _payment_providers/express_checkout:
+.. _payment-providers-express-checkout:
 
 Express checkout
 ================
 
-:ref:`If the payment provider supports this feature <payment_providers/online_providers>`, you can
+:ref:`If the payment provider supports this feature <payment-providers-online-providers>`, you can
 allow customers to use the :guilabel:`Google Pay` and :guilabel:`Apple Pay` buttons and pay their
 eCommerce orders in one click. When they use one of these buttons, customers go straight from the
 cart to the confirmation page without filling out the contact form. They just have to validate the
@@ -320,12 +329,12 @@ enable :guilabel:`Allow Express Checkout`.
 .. note::
    All prices shown on the express checkout payment form always include taxes.
 
-.. _payment_providers/extra_fees:
+.. _payment-providers-extra-fees:
 
 Extra Fees
 ==========
 
-:ref:`If the payment provider supports this feature <payment_providers/online_providers>`, you can
+:ref:`If the payment provider supports this feature <payment-providers-online-providers>`, you can
 add extra fees to online transactions. Fees can be configured either as **fixed** amounts and
 percentages, **variable** amounts and percentages, or both simultaneously. They can also differ
 based on whether the transaction is **domestic** or **international**.
@@ -343,7 +352,7 @@ You can adapt the payment provider's availability by specifying the :guilabel:`M
 allowed and modifying the :guilabel:`Currencies` and :guilabel:`Countries` in the
 :guilabel:`Configuration` tab.
 
-.. _payment_providers/currencies_countries:
+.. _payment-providers-currencies-countries:
 
 Currencies and countries
 ------------------------
@@ -356,7 +365,7 @@ adding or removing a payment provider's supported currencies or countries is pos
 
 .. note::
 
-   - :ref:`Payment methods <payment_providers/payment_methods>` also have their own list of
+   - :ref:`Payment methods <payment-providers-payment-methods>` also have their own list of
      available currencies and countries that serves as another filter during payment operations.
    - If the list of supported currencies or countries is empty, it means the list is too long to be
      displayed, or Odoo does not have information on that payment provider. The payment provider
@@ -374,7 +383,7 @@ the field to `0.00` to make the payment provider available regardless of the pay
    amount, e.g., the **Donation** snippet and the **Checkout** page when paid :doc:`shipping methods
    <../websites/ecommerce/checkout_payment_shipping/shipping>` are enabled.
 
-.. _payment_providers/journal:
+.. _payment-providers-journal:
 
 Payment journal
 ===============
@@ -393,12 +402,12 @@ Accounting perspective
 From an accounting perspective, there are two types of online payment workflows: the payments that
 are directly deposited into your bank account and follow the usual :doc:`reconciliation
 <accounting/bank/reconciliation>` workflow, and those coming from third-party :ref:`online payment
-providers <payment_providers/online_providers>` and require you to follow another accounting
+providers <payment-providers-online-providers>` and require you to follow another accounting
 workflow. For these payments, you need to consider how you want to record your payments' journal
 entries. We recommend you ask your accountant for advice.
 
 By default, the :guilabel:`Bank Account` defined for the :ref:`payment journal
-<payment_providers/journal>` is used, but you can also specify an :ref:`outstanding account
+<payment-providers-journal>` is used, but you can also specify an :ref:`outstanding account
 <bank/outstanding-accounts>` for each payment provider to separate the provider's payments from
 other payments.
 

@@ -70,8 +70,8 @@ invoice manually.
 
 .. important::
    If the online confirmation requires a pre-payment, your customer can select only the
-   :ref:`payment providers <payment_providers/supported_providers>` that have the :ref:`tokenization
-   feature <payment_providers/tokenization>`. This ensures that the customer is automatically
+   :ref:`payment providers <payment-providers-supported-providers>` that have the :ref:`tokenization
+   feature <payment-providers-tokenization>`. This ensures that the customer is automatically
    charged at each new period.
 
 .. toctree::

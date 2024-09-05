@@ -9,7 +9,7 @@ Configuration
 =============
 
 .. seealso::
-   - :ref:`payment_providers/add_new`
+   :ref:`payment-providers-add-new`
 
 Credentials tab
 ---------------
@@ -41,14 +41,14 @@ Place a hold on a card
 ~~~~~~~~~~~~~~~~~~~~~~
 
 With Authorize.Net, you can enable the :ref:`manual capture
-<payment_providers/manual_capture>`. If enabled, the funds are reserved for 30 days on the
+<payment-providers-manual-capture>`. If enabled, the funds are reserved for 30 days on the
 customer's card, but not charged yet.
 
 .. warning::
    After **30 days**, the transaction is **voided automatically** by Authorize.Net.
 
 .. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`
 
 ACH payments (USA only)
 =======================

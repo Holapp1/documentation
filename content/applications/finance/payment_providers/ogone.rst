@@ -6,7 +6,7 @@ Ogone
 company that provides the technology involved in secure electronic transactions.
 
 .. seealso::
-   - :ref:`payment_providers/add_new`
+   - :ref:`payment-providers-add-new`
    - `Ogone's documentation <https://epayments-support.ingenico.com/get-started/>`_.
 
 .. warning::

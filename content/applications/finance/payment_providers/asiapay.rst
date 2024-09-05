@@ -26,7 +26,7 @@ Configuration on AsiaPay Dashboard
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment provider AsiaPay <payment_providers/add_new>` and change its state
+#. :ref:`Navigate to the payment provider AsiaPay <payment-providers-add-new>` and change its state
    to :guilabel:`Enabled`.
 #. | In the :guilabel:`Credentials` tab, fill the :guilabel:`Merchant ID`, :guilabel:`Currency`, and
      :guilabel:`Secure Hash Secret` with the values you saved at the step
@@ -38,4 +38,4 @@ Configuration on Odoo
 #. Configure the rest of the options to your liking.
 
 .. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`

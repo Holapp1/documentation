@@ -9,7 +9,7 @@ Configuration
 =============
 
 .. seealso::
-   :ref:`payment_providers/add_new`
+   :ref:`payment-providers-add-new`
 
 .. important::
    Switch the state to :guilabel:`Test Mode`.

@@ -36,7 +36,7 @@ Configuration on APS Dashboard
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment provider Amazon Payment Services <payment_providers/add_new>`,
+#. :ref:`Navigate to the payment provider Amazon Payment Services <payment-providers-add-new>`,
    change its state to :guilabel:`Enabled`, and make sure it is :guilabel:`Published`.
 #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Merchant Identifier`,
    :guilabel:`Access Code`, :guilabel:`SHA Request Phrase` and :guilabel:`SHA Response Phrase` with

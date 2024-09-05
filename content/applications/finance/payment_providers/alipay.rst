@@ -12,7 +12,7 @@ Configuration
 =============
 
 .. seealso::
-   - :ref:`payment_providers/add_new`
+   :ref:`payment-providers-add-new`
 
 Credentials tab
 ---------------
@@ -36,4 +36,4 @@ To retrieve them, log into your Alipay account, they are on the front page.
    recommend doing this on a test Odoo database, rather than on your main database.
 
 .. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`

@@ -5,7 +5,7 @@ Buckaroo
 `Buckaroo <https://www.buckaroo.eu/>`_ is a Dutch-based company that offers several online payment
 possibilities.
 
-.. _payment_providers/buckaroo/configure_dashboard:
+.. _payment-providers-buckaroo-configuration:
 
 Configuration on Buckaroo Plaza
 ===============================
@@ -26,11 +26,11 @@ Configuration on Buckaroo Plaza
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment provider Buckaroo <payment_providers/add_new>` and change its state
+#. :ref:`Navigate to the payment provider Buckaroo <payment-providers-add-new>` and change its state
    to :guilabel:`Enabled`.
 #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Website Key` and :guilabel:`Secret Key`
    fields with the values you saved at the step
-   :ref:`payment_providers/buckaroo/configure_dashboard`.
+   :ref:`payment-providers-buckaroo-configuration`.
 #. Configure the options in the other tabs to your liking.
 
 .. seealso::

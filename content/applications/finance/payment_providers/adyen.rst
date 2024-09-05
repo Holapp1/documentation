@@ -6,7 +6,7 @@ Adyen
 possibilities.
 
 .. seealso::
-   - :ref:`payment_providers/add_new`
+   - :ref:`payment-providers-add-new`
    - :doc:`../payment_providers`
 
 .. note::
@@ -17,7 +17,7 @@ Configuration
 =============
 
 .. seealso::
-   :ref:`payment_providers/add_new`
+   :ref:`payment-providers-add-new`
 
 Credentials tab
 ---------------
@@ -103,7 +103,7 @@ URLs, proceed as follows:
    .. image:: adyen/adyen-api-urls.png
      :alt: Copy the prefix for the Adyen APIs
 
-#. In Odoo, :ref:`navigate to the payment provider Adyen <payment_providers/add_new>`.
+#. In Odoo, :ref:`navigate to the payment provider Adyen <payment-providers-add-new>`.
 #. In the :guilabel:`Checkout API URL` field, enter the following URL and replace `yourprefix` with
    the prefix you previously saved:
    `https://yourprefix-checkout-live.adyenpayments.com/checkout`
@@ -139,7 +139,7 @@ Place a hold on a card
 Adyen allows you to capture an amount manually instead of having an immediate capture.
 
 To set it up, enable the **Capture Amount Manually** option on Odoo, as explained in the
-:ref:`payment providers documentation <payment_providers/manual_capture>`.
+:ref:`payment providers documentation <payment-providers-manual-capture>`.
 
 Then, open your Adyen Merchant Account, go to :menuselection:`Account --> Settings`, and set the
 **Capture Delay** to **manual**.
